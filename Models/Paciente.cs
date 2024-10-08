@@ -31,5 +31,15 @@ namespace Hospital.Models
 
         [Display(Name = "Cidade: ")]
         public Cidade Cidade { get; set; }
+
+        [Key]
+        public int CodPac { get; set; }
+
+        [Required]
+        public string NomePac { get; set; }
+
+        [Required]
+        public int CodCidad { get; set; }
+        public int Status { get; set; }
     }
 }
