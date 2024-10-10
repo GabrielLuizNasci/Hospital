@@ -20,20 +20,5 @@ namespace Hospital.Models
         [StringLength(30)]
         [Display(Name = "Estado: ")]
         public string Estado { get; set; }
-
-        [Key]
-        public int CodCidad { get; set; }
-
-        [Required, StringLength(30)]
-        public string NomeCid { get; set; }
-
-        [Required, StringLength(4)]
-        public string UF { get; set; }
-        
-        [Key]
-        public int CodCid { get; set; }
-
-        [Required]
-        public string DescCid { get; set; }
     }
 }

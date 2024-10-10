@@ -1,4 +1,10 @@
+using Hospital.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<Contexto>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("conexao")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

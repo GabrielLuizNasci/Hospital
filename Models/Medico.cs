@@ -1,27 +1,41 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hospital.Models
 {
+    [Table("Medicos")]
     public class Medico
     {
         [Key]
-        public int CodMed { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "ID: ")]
+        public int Id { get; set; }
 
         [Required]
-        public string NomeMed { get; set; }
+        [StringLength(50)]
+        [Display(Name = "Nome: ")]
+        public string Nome { get; set; }
+
+        [Display(Name = "Especialidade: ")]
+        public int EspecID { get; set; }
+
+        [Display(Name = "Especialidade: ")]
+        public Especialidade Especialidade { get; set; }
 
         [Required]
-        public int CodEspec { get; set; }
+        [StringLength(50)]
+        [Display(Name = "E-mail: ")]
+        public string Email { get; set; }
 
         [Required]
-        public string EndMed { get; set; }
-
-        [Required, StringLength(15)]
+        [StringLength(11)]
+        [Display(Name = "Telefone: ")]
         public string Telefone { get; set; }
 
-        [Required]
-        public int CodCidad { get; set; }
+        [Display(Name = "Cidade: ")]
+        public int CidadeID { get; set; }
 
-        public int Status { get; set; }
+        [Display(Name = "Cidade: ")]
+        public Cidade Cidade { get; set; }
     }
 }
