@@ -14,7 +14,7 @@ namespace Hospital.Models
         [Required]
         [StringLength(35)]
         [Display(Name = "Descrição: ")]
-        public string DescEspec { get; set; }
+        public string DescMedica { get; set; }
 
         [Required]
         [Display(Name = "Estoque atual: ")]

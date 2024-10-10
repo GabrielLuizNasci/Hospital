@@ -12,12 +12,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-red border-bottom box-shadow mb-3" style="background-color: #EE4B2B;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-red border-bottom box-shadow mb-3 navbar-branco" style="background-color: #EE4B2B;">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand" style="color: white" asp-area="" asp-controller="Home" asp-action="Index">
                     <i class="bi bi-hospital-fill"></i>
                     Hospital
-                   </a>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,43 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown navbar-branco">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lista de Cadastros
+                            </a>
+                            <ul class="dropdown-menu" style="background-color: #F88379;">
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Cidades" asp-action="Index">
+                                        Cidades
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Especialidades" asp-action="Index">
+                                        Especialidades
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Pacientes" asp-action="Index">
+                                        Pacientes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Medicos" asp-action="Index">
+                                        Medicos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Medicamentos" asp-action="Index">
+                                        Medicamentos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" style="color: white" asp-area="" asp-controller="Consultas" asp-action="Index">
+                                        Consultas
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -41,9 +78,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color: #EE4B2B;">
+    <footer class="border-top footer" style="background-color: #EE4B2B; color: white">
         <div class="container">
-            &copy; 2024 - Hospital - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - Crud de Hospital - Gabriel Luiz & Rafael Ramos
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

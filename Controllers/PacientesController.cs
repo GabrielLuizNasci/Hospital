@@ -47,7 +47,7 @@ namespace Hospital.Controllers
         // GET: Pacientes/Create
         public IActionResult Create()
         {
-            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Estado");
+            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Nome");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace Hospital.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Estado", paciente.CidadeID);
+            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Nome", paciente.CidadeID);
             return View(paciente);
         }
 
@@ -81,7 +81,7 @@ namespace Hospital.Controllers
             {
                 return NotFound();
             }
-            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Estado", paciente.CidadeID);
+            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Nome", paciente.CidadeID);
             return View(paciente);
         }
 
@@ -117,7 +117,7 @@ namespace Hospital.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Estado", paciente.CidadeID);
+            ViewData["CidadeID"] = new SelectList(_context.Cidades, "Id", "Nome", paciente.CidadeID);
             return View(paciente);
         }
 
